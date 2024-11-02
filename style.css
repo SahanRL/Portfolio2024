@@ -60,7 +60,6 @@ header{
 
 main div[class="hero"]{
     display: flex;
-    flex-direction: row;
     position: relative;
     width: 100%;
     height: 100%;
@@ -123,6 +122,7 @@ main div[class="hero"]{
 .hero-image img{
     height: 500px;
     width: 500px;
+
 }
 
 .links{
@@ -288,6 +288,7 @@ form .send-button{
     background: #13678A;
     width: 70px;
     height:35px;
+    border: transparent;
     border-radius: 10px;
     transition: 1s;
 }
@@ -331,6 +332,10 @@ form .send-button:hover{
     font-size: 16px;
     max-width: 1000px;
     margin-bottom: 20px;
+}
+
+.blog-content h3{
+    font-size: 12px;
 }
 
 .blog-images img{
@@ -384,4 +389,93 @@ footer{
 
 .footer a:hover{
     color: #ddd;
+}
+
+@media (max-width : 768px) {
+
+main div[class="hero"]{
+    flex-direction: column;
+}
+
+.hero-text{
+    text-align: center;
+    margin-left: -10px;
+}
+
+.hero a{
+    align-items: center;
+   margin-left: 120px;
+}
+
+.hero-image img{
+    width: 350px;
+    max-height: 350px;
+    padding-right: 10PX;
+
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.about-title h1{
+    font-family: roboto;
+    font-weight: 800;
+    font-size: 48px;
+    text-align: center;
+}
+
+.about-sec{
+    margin-top: 100px;
+    margin-left: 0;
+}
+.about-des p {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    margin: 30px;
+}
+
+.education-sec,
+.experience-sec{
+    padding: 0;
+    margin: 30px;
+    text-align: center;
+}
+
+.about-button{
+    margin-top: -100px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    padding:20px;
+}
+
+form .send-button{
+    margin-top: -20px;
+}
+
+input[type="text"] {    
+    width: 300px;
+}
+
+.blog-images img{
+    margin: 0;     /* where i left*/
+    padding: 0;
+}
+
+footer{
+    display: none;   
+}
+
+header{
+    display: none;
+}
+
 }
