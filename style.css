@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,12 +6,14 @@
     list-style: none;
 }
 
-body {
+body{
     background-color: #012030;
     color: white;
 }
 
-header {
+/*Css lines for navigation bar*/
+
+header{
     position: fixed;
     right: 0px;
     top: 0px;
@@ -21,37 +23,42 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 33px;
-    background: transparent;
-
-
+    background: rgba(1,32,48,0.5);
 }
 
-.tab {
+.tab{
     font-size: 20px;
     font-weight: 900;
     font-family: Roboto, sans-serif;
-
 }
 
-.tab span {
+.tab span{
     font-weight: 100;
 }
 
-.nav {
+.nav{
     display: flex;
-
 }
 
-.nav a {
+.nav a{
     color: white;
+    font-family: itim;
     font-weight: 300;
     margin-left: 60px;
     font-size: 15px;
     border-bottom: 2px solid transparent;
     text-decoration: none;
+    transition: 0.3s;
 }
 
-.hero{
+.nav a:hover,
+.nav a.active{
+    color: aqua;
+}
+
+/*Css lines for Home page*/
+
+main div[class="hero"]{
     display: flex;
     flex-direction: row;
     position: relative;
@@ -61,30 +68,26 @@ header {
     align-items: center;
     padding-top: 200px;
     padding-left: 200px;
-    padding-right: 200px;
-    
-}
-
-.hero-image{
-    height: 500px;
-    width: 500px;
-   /* border-radius: 50%; 
-    border: 10px solid #333;
-    box-sizing: content-box; */
+    padding-right: 200px;    
 }
 
 .hero-text{
     display: flex;
     flex-direction: column;
     margin-left: 100px;
-
 }
 
 .hero-text h2{
     font-family: roboto;
     font-weight: 500;
     font-size: 32px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .hero-text h1{
@@ -92,7 +95,9 @@ header {
     font-weight: 800;
     font-size: 64px;
     margin-top: -10px;
-
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: 1s;
 }
 
 .hero a{
@@ -104,39 +109,252 @@ header {
     padding: 8px 15px;
     border-radius: 10px;
     margin-top: 20px;
-
+    transition: 0.3s;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 2s;
 }
 
-.links {
+.hero a:hover{
+    background: transparent;
+    border: 1px solid white;
+}
+
+.hero-image img{
+    height: 500px;
+    width: 500px;
+}
+
+.links{
     display: flex;
     justify-content: center; 
-    margin-top: 20px;
+    margin-top: 20px;   
 }
 
-.links ul {
+.links ul{
     display: flex;
     gap: 15px; 
     list-style: none;
     padding-bottom: 20px;
 }
 
-.links i {
+.links i{
     font-size: 24px;
     color: white;
     padding-left: 10px;
+    transition: 0.3s;    
 }
 
+.links i:hover{
+    color: aqua;
+    scale: 1.05;
+}
 
-footer {
+/*Css lines for about page*/
+
+.about {
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+}
+
+.about-sec {
+    margin-left: 10px;
+    max-width: 800px;
+    margin-left: 100px;
+}
+
+.about-title h1{
+    font-family: roboto;
+    font-weight: 800;
+    font-size: 48px;
+}
+
+.about-des p {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.education-sec{
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+.experience-sec{
+    margin-left: 60px;
+    margin-top: 30px;
+    padding-right: 50px;
+}
+
+.about-button {
+    position: relative;
+    top: 120px; /* Moves it down 20px */
+    margin: 0 auto;
+    padding: 10px;   
+}
+
+.about-button a{
+    text-decoration: none;
+    color: white;
+    background: #13678A;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.about-button a:hover{
+    background: transparent;
+    border: 1px solid white;
+}
+
+/*Css lines for contact page*/
+
+.contact{
+    display: flex;
+    height: 85vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+form {
+    background: #0A3445;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    padding-right: 100px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+form div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+input[type="text"] {
+    flex: 1; /* Make the input expand to fill the space */
+    width: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #334A5E;
+    color: #fff;
+}
+
+input:valid {
+    border: 2px solid green; 
+}
+  
+input:invalid {
+    border: 2px solid red;
+}
+
+input:invalid:placeholder-shown {
+    border: none;
+}
+
+.left-content > h1 {
+    font-family: roboto;
+    font-size: 40px;
+    max-width: 400px;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0);
+    padding-left: 20px;
+}
+
+.left-content > h1::first-letter{
+    font-size: 64px;
+    font-weight: bold;
+}
+
+form .button{
+    justify-content: center;
+    margin-left: 50px;
+}
+form .send-button{
+    font-family: roboto;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    background: #13678A;
+    width: 70px;
+    height:35px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+form .send-button:hover{
+    background: transparent;
+    border: 1px solid white;
+}
+
+.my-contact > h3{
+    font-family: roboto;
+    padding-right: 20px;
+}
+
+/*Css lines for Blog page*/
+
+.blog-content {
+    background: linear-gradient(45deg, #0D445B, #0B2633);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.blog-des{
+    margin-top: 100px;
+    
+}
+.blog-content h2{
+    font-family: truculenta;
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline;
+
+}
+
+.blog-content p{
+    font-family: itim;
+    font-size: 16px;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+.blog-images img{
+    border: 2px solid transparent;
+    border-radius: 10px;
+}
+
+.blog-images img:nth-child(1){
+    margin-left: -30px;
+}
+
+.blog-images img:nth-child(2){
+    margin-left: 30px;
+}
+
+footer{
     background: rgba(255, 255, 255, 0.2);
     padding: 20px;
-    position: relative;
     bottom: 0;
     width: 100%;
     text-align: center;
 }
 
-.footer ul {
+.footer ul{
     list-style: none;
     padding: 0;
     margin: 0;
@@ -146,17 +364,24 @@ footer {
     gap: 10px;
 }
 
-.footer li {
+.footer a{
     display: block;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease-in;
 }
 
-.footer a {
+.footer a:hover,
+.footer a.activefooter{
+    border-bottom: 2px solid white;
+}
+
+.footer a{
     text-decoration: none;
     color: #fff;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
-.footer a:hover {
-    color: #ddd; /* Change color on hover */
+.footer a:hover{
+    color: #ddd;
 }
