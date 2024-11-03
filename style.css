@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,14 +6,14 @@
     list-style: none;
 }
 
-body{
+body {
     background-color: #012030;
     color: white;
 }
 
 /*Css lines for navigation bar*/
 
-header{
+header {
     position: fixed;
     right: 0px;
     top: 0px;
@@ -26,21 +26,21 @@ header{
     background: rgba(1,32,48,0.5);
 }
 
-.tab{
+.tab {
     font-size: 20px;
     font-weight: 900;
     font-family: Roboto, sans-serif;
 }
 
-.tab span{
+.tab span {
     font-weight: 100;
 }
 
-.nav{
+.nav {
     display: flex;
 }
 
-.nav a{
+.nav a {
     color: white;
     font-family: itim;
     font-weight: 300;
@@ -52,13 +52,18 @@ header{
 }
 
 .nav a:hover,
-.nav a.active{
+.nav a.active {
     color: aqua;
+}
+
+#nav-buttons {
+    z-index: 1001;
+    display: none;
 }
 
 /*Css lines for Home page*/
 
-main div[class="hero"]{
+main div[class="hero"] {
     display: flex;
     position: relative;
     width: 100%;
@@ -70,13 +75,13 @@ main div[class="hero"]{
     padding-right: 200px;    
 }
 
-.hero-text{
+.hero-text {
     display: flex;
     flex-direction: column;
     margin-left: 100px;
 }
 
-.hero-text h2{
+.hero-text h2 {
     font-family: roboto;
     font-weight: 500;
     font-size: 32px;
@@ -84,12 +89,12 @@ main div[class="hero"]{
     animation: fadeIn 2s ease-in-out forwards;
 }
 
-@keyframes fadeIn {
+@keyframes fadeIn {            /*Fade animation*/
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
-.hero-text h1{
+.hero-text h1 {
     font-family: roboto;
     font-weight: 800;
     font-size: 64px;
@@ -99,7 +104,7 @@ main div[class="hero"]{
     animation-delay: 1s;
 }
 
-.hero a{
+.hero a {
     text-decoration: none;
     width: 105px;
     color: white;
@@ -114,38 +119,38 @@ main div[class="hero"]{
     animation-delay: 2s;
 }
 
-.hero a:hover{
+.hero a:hover {
     background: transparent;
     border: 1px solid white;
 }
 
-.hero-image img{
+.hero-image img {
     height: 500px;
     width: 500px;
 
 }
 
-.links{
+.links {                       /*Social media links */
     display: flex;
     justify-content: center; 
     margin-top: 20px;   
 }
 
-.links ul{
+.links ul {
     display: flex;
     gap: 15px; 
     list-style: none;
     padding-bottom: 20px;
 }
 
-.links i{
+.links i {
     font-size: 24px;
     color: white;
     padding-left: 10px;
     transition: 0.3s;    
 }
 
-.links i:hover{
+.links i:hover {
     color: aqua;
     scale: 1.05;
 }
@@ -170,7 +175,7 @@ main div[class="hero"]{
     margin-left: 100px;
 }
 
-.about-title h1{
+.about-title h1 {
     font-family: roboto;
     font-weight: 800;
     font-size: 48px;
@@ -182,12 +187,12 @@ main div[class="hero"]{
     text-align: justify;
 }
 
-.education-sec{
+.education-sec {
     margin-left: 60px;
     margin-top: 30px;
 }
 
-.experience-sec{
+.experience-sec {
     margin-left: 60px;
     margin-top: 30px;
     padding-right: 50px;
@@ -195,12 +200,12 @@ main div[class="hero"]{
 
 .about-button {
     position: relative;
-    top: 120px; /* Moves it down 20px */
+    top: 120px;
     margin: 0 auto;
     padding: 10px;   
 }
 
-.about-button a{
+.about-button a {
     text-decoration: none;
     color: white;
     background: #13678A;
@@ -209,14 +214,14 @@ main div[class="hero"]{
     transition: 1s;
 }
 
-.about-button a:hover{
+.about-button a:hover {
     background: transparent;
     border: 1px solid white;
 }
 
 /*Css lines for contact page*/
 
-.contact{
+.contact {
     display: flex;
     height: 85vh;
     align-items: center;
@@ -242,7 +247,7 @@ form div {
 }
 
 input[type="text"] {
-    flex: 1; /* Make the input expand to fill the space */
+    flex: 1;            /*Make the input expand to fill the space*/
     width: 400px;
     padding: 10px;
     border-radius: 5px;
@@ -260,7 +265,7 @@ input:invalid {
 }
 
 input:invalid:placeholder-shown {
-    border: none;
+    border: none;                   /*For before enter the data. Do nothing color change to the border*/
 }
 
 .left-content > h1 {
@@ -271,16 +276,16 @@ input:invalid:placeholder-shown {
     padding-left: 20px;
 }
 
-.left-content > h1::first-letter{
+.left-content > h1::first-letter {
     font-size: 64px;
     font-weight: bold;
 }
 
-form .button{
+form .button {
     justify-content: center;
     margin-left: 50px;
 }
-form .send-button{
+form .send-button {
     font-family: roboto;
     font-weight: 500;
     text-decoration: none;
@@ -293,12 +298,12 @@ form .send-button{
     transition: 1s;
 }
 
-form .send-button:hover{
+form .send-button:hover {
     background: transparent;
     border: 1px solid white;
 }
 
-.my-contact > h3{
+.my-contact > h3 {
     font-family: roboto;
     padding-right: 20px;
 }
@@ -314,11 +319,11 @@ form .send-button:hover{
     padding: 50px;
 }
 
-.blog-des{
+.blog-des {
     margin-top: 100px;
     
 }
-.blog-content h2{
+.blog-content h2 {
     font-family: truculenta;
     font-size: 48px;
     margin-bottom: 20px;
@@ -327,31 +332,32 @@ form .send-button:hover{
 
 }
 
-.blog-content p{
+.blog-content p {
     font-family: itim;
     font-size: 16px;
     max-width: 1000px;
     margin-bottom: 20px;
 }
 
-.blog-content h3{
+.blog-content h3,
+.blog-content time {
     font-size: 12px;
 }
 
-.blog-images img{
+.blog-images img {
     border: 2px solid transparent;
     border-radius: 10px;
 }
 
-.blog-images img:nth-child(1){
+.blog-images img:nth-child(1) {
     margin-left: -30px;
 }
 
-.blog-images img:nth-child(2){
+.blog-images img:nth-child(2) {
     margin-left: 30px;
 }
 
-footer{
+footer {
     background: rgba(255, 255, 255, 0.2);
     padding: 20px;
     bottom: 0;
@@ -359,7 +365,7 @@ footer{
     text-align: center;
 }
 
-.footer ul{
+.footer ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -369,64 +375,66 @@ footer{
     gap: 10px;
 }
 
-.footer a{
+.footer a {
     display: block;
     border-bottom: 2px solid transparent;
     transition: 0.3s ease-in;
 }
 
 .footer a:hover,
-.footer a.activefooter{
+.footer a.activefooter {
     border-bottom: 2px solid white;
 }
 
-.footer a{
+.footer a {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
-.footer a:hover{
+.footer a:hover {
     color: #ddd;
 }
 
+/*Css lines for mobile response*/
+
 @media (max-width : 768px) {
 
-main div[class="hero"]{
+main div[class="hero"] {
     flex-direction: column;
 }
 
-.hero-text{
+.hero-text {
     text-align: center;
     margin-left: -10px;
 }
 
-.hero a{
+.hero a {
     align-items: center;
    margin-left: 120px;
 }
 
-.hero-image img{
+.hero-image img {
     width: 350px;
     max-height: 350px;
     padding-right: 10PX;
 
 }
 
-.content{
+.content {
     display: flex;
     flex-direction: column;
 }
 
-.about-title h1{
+.about-title h1 {
     font-family: roboto;
     font-weight: 800;
     font-size: 48px;
     text-align: center;
 }
 
-.about-sec{
+.about-sec {
     margin-top: 100px;
     margin-left: 0;
 }
@@ -438,26 +446,27 @@ main div[class="hero"]{
 }
 
 .education-sec,
-.experience-sec{
+.experience-sec {
     padding: 0;
     margin: 30px;
     text-align: center;
 }
 
-.about-button{
+.about-button {
     margin-top: -100px;
 }
 
-.contact{
+.contact {
     display: flex;
     flex-direction: column;
+    margin-top: 80px;
 }
 
-form{
+form {
     padding:20px;
 }
 
-form .send-button{
+form .send-button {
     margin-top: -20px;
 }
 
@@ -465,17 +474,42 @@ input[type="text"] {
     width: 300px;
 }
 
-.blog-images img{
-    margin: 0;     /* where i left*/
-    padding: 0;
+.blog-images img {
+    margin-right: 30px;     /*push to left 30px*/
+    border: 0;
 }
 
-footer{
+.blog-images img:nth-child(1) {
+    margin-left: 30px;
+}
+
+footer {
     display: none;   
 }
 
-header{
+.nav a,
+header h3 {
     display: none;
+}
+
+#nav-buttons {
+    display: block;
+    position: absolute;
+    top: 0%;
+    right: 0;
+    width: 100%;
+    justify-content: space-between;
+    background: rgba(1,32,48,0.5);
+    display: flex;
+    padding: 40px;
+}
+
+#nav-buttons a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    margin: 20px;
 }
 
 }
