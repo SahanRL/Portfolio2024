@@ -57,13 +57,12 @@ header {
 }
 
 #nav-buttons {
-    z-index: 1001;
     display: none;
 }
 
 /*Css lines for Home page*/
 
-main div[class="hero"] {
+main div[class="hero"] {            /*attribute selector for hero contents*/
     display: flex;
     position: relative;
     width: 100%;
@@ -98,7 +97,7 @@ main div[class="hero"] {
     font-family: roboto;
     font-weight: 800;
     font-size: 64px;
-    margin-top: -10px;
+    margin-top: -10px;      /*push text little bit up*/
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
     animation-delay: 1s;
@@ -150,9 +149,9 @@ main div[class="hero"] {
     transition: 0.3s;    
 }
 
-.links i:hover {
+.links i:hover {                    /*used user action pseudo class hover*/
     color: aqua;
-    scale: 1.05;
+    transform: scale(1.5);          /*transform scale hover effect for linked icons*/
 }
 
 /*Css lines for about page*/
@@ -230,7 +229,7 @@ main div[class="hero"] {
 
 form {
     background: #0A3445;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);      /*shadow for form border*/
     padding: 50px;
     padding-right: 100px;
     border-radius: 10px;
@@ -257,26 +256,26 @@ input[type="text"] {
 }
 
 input:valid {
-    border: 2px solid green; 
+    border: 2px solid green;          /*used validity  pseudo class for green color*/
 }
   
-input:invalid {
+input:not(:valid) {                     /*used negation pseudo class for red color*/
     border: 2px solid red;
 }
 
 input:invalid:placeholder-shown {
-    border: none;                   /*For before enter the data. Do nothing color change to the border*/
+    border: none;                       /*For before enter the data, Do nothing color changes to the border*/
 }
 
 .left-content > h1 {
     font-family: roboto;
     font-size: 40px;
     max-width: 400px;
-    text-shadow: 5px 5px 4px rgba(0, 0, 0);
+    text-shadow: 5px 5px 4px rgba(0, 0, 0);     /*Shdow effect for text*/
     padding-left: 20px;
 }
 
-.left-content > h1::first-letter {
+.left-content > h1::first-letter {                /*pseudo element for L*/
     font-size: 64px;
     font-weight: bold;
 }
@@ -349,11 +348,11 @@ form .send-button:hover {
     border-radius: 10px;
 }
 
-.blog-images img:nth-child(1) {
+.blog-images img:first-child {         /*structural selectors for select first image*/
     margin-left: -30px;
 }
 
-.blog-images img:nth-child(2) {
+.blog-images img:nth-child(2) {         /*nth pseudo class for select 2nd image*/
     margin-left: 30px;
 }
 
